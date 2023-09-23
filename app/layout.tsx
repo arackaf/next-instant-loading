@@ -17,8 +17,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="flex flex-col gap-3 p-3">
           <div className="flex gap-5">
             <Link href="/">Home</Link>
-            <Link href="/full">Full load</Link>
-            <Link href="/stream">Suspense stream</Link>
+            <Link href="/no-suspense">Page with data</Link>
+            <Link href="/stream">Page with Suspense stream</Link>
           </div>
           {children}
         </div>
