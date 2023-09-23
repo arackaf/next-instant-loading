@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { Child } from "./Child";
 
 function LoadingLocal() {
-  return <div className="w-48 h-48 bg-pink-400 text-black">Loading</div>;
+  return <div className="w-48 h-48 bg-pink-400 text-black">Suspense fallback</div>;
 }
 
 export default async function Home() {
