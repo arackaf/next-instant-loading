@@ -4,11 +4,11 @@ import { FC } from "react";
 import { useSuspenseQuery, useQuery } from "@tanstack/react-query";
 
 export const Child: FC<{}> = () => {
-  const { data, isLoading } = useQuery({
+  const { data, isLoading } = useSuspenseQuery({
     queryKey: ["query", "a"],
     queryFn: async () => {
       console.log("in query function");
-      await new Promise((res) => setTimeout(res, 3000));
+      await new Promise((res) => setTimeout(res, 100));
 
       return {
         tasks: [
