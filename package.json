@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@tanstack/react-query": "^5.0.0-alpha.91",
-    "@tanstack/react-query-next-experimental": "^5.0.0-alpha.80",
+    "@tanstack/react-query": "^5.0.0-beta.35",
+    "@tanstack/react-query-next-experimental": "^5.0.0-beta.35",
     "@types/node": "20.6.3",
     "@types/react": "18.2.22",
     "@types/react-dom": "18.2.7",
