@@ -2,6 +2,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
+import { Providers } from "./Providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,8 +20,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <Link href="/">Home</Link>
             <Link href="/no-suspense">Page with data</Link>
             <Link href="/stream">Page with Suspense stream</Link>
+            <Link href="/query">React Query</Link>
           </div>
-          {children}
+          <Providers>{children}</Providers>
         </div>
       </body>
     </html>
