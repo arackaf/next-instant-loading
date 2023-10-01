@@ -1,13 +1,13 @@
 "use client";
 
 import { FC } from "react";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useSuspenseQuery } from "@tanstack/react-query";
 
 export const ChildClient: FC<{}> = () => {
-  const { data, isLoading } = useQuery({
+  const { data, isLoading } = useSuspenseQuery({
     queryKey: ["query", "b"],
     queryFn: async () => {
-      console.log("in query function b");
+      console.log("in query function 2");
       await new Promise((res) => setTimeout(res, 2000));
 
       return {
@@ -18,9 +18,6 @@ export const ChildClient: FC<{}> = () => {
         ],
       };
     },
-    staleTime: 30000,
-    refetchInterval: 20000,
-    refetchOnMount: false,
   });
 
   return data ? (

@@ -6,8 +6,11 @@ export default async function Page() {
   return (
     <div>
       <Child />
+      <br />
       <Child2 />
+      <br />
       <Child3 />
+      <br />
     </div>
   );
 }
