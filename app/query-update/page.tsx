@@ -1,4 +1,4 @@
-import { HydrationBoundary, QueryClient, dehydrate } from "@tanstack/react-query";
+import { Hydrate, QueryClient, dehydrate } from "@tanstack/react-query";
 import { Child } from "./Child1/Child";
 
 export const getSsrQueryClient = () => new QueryClient();
@@ -20,9 +20,9 @@ export default async function Page() {
 
   return (
     <div>
-      <HydrationBoundary state={dehydrate(queryClient)}>
+      <Hydrate state={dehydrate(queryClient)}>
         <Child />
-      </HydrationBoundary>
+      </Hydrate>
     </div>
   );
 }
