@@ -1,7 +1,7 @@
 import { HydrationBoundary, QueryClient, dehydrate } from "@tanstack/react-query";
 import { Child } from "./Child1/Child";
 
-export const getSsrQueryClient = () => new QueryClient();
+const getSsrQueryClient = () => new QueryClient();
 
 export default async function Page() {
   const queryClient = getSsrQueryClient();
