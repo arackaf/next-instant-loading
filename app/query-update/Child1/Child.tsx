@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { getSsrQueryClient } from "../utils";
-import { Hydrate, dehydrate } from "@tanstack/react-query";
+import { HydrationBoundary, dehydrate } from "@tanstack/react-query";
 import { ChildClient } from "./ChildClient";
 
 export const Child: FC<{}> = async () => {
@@ -17,8 +17,8 @@ export const Child: FC<{}> = async () => {
   });
 
   return (
-    <Hydrate state={dehydrate(queryClient)}>
+    <HydrationBoundary state={dehydrate(queryClient)}>
       <ChildClient />
-    </Hydrate>
+    </HydrationBoundary>
   );
 };
